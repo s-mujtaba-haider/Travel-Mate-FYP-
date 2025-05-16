@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "d80f8ffd-62a9-4980-843b-c1efd7543b6b",
+		"name": "Travel Mate",
+		"description": "APIs for RAG CHAT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10362117",
+		"_collection_link": "https://ai4lyf-api.postman.co/workspace/AI4LYF-Team~838f50db-3cee-4dc6-8070-c67d1a753cad/collection/10362117-d80f8ffd-62a9-4980-843b-c1efd7543b6b?action=share&source=collection_link&creator=10362117"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "SignUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user11@example.com\",\r\n  \"password\": \"string\",\r\n  \"first_name\": \"string\",\r\n  \"last_name\": \"string\",\r\n  \"dob\": \"2024-11-28\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/signup",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user11@example.com\",\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "forget",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"user11@example.com\",\r\n  \"new_password\": \"string123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/forget",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"forget"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDM3N2Q3My0xOGVmLTQ2ZWItODAyOC02NzA4NTNkNDhiM2UiLCJpYXQiOjE3MzI4MjU2NjksIm5iZiI6MTczMjgyNTY2OSwianRpIjoiOThmNGZiYjAtMzhkOC00ODIwLWFjNDQtZGZiZWViN2E1ZTE5IiwidHlwZSI6ImFjY2VzcyIsImZyZXNoIjpmYWxzZX0.FcPqIjQ4uN1prHCGCUhLtFzc1XZGnS07MuNw78XlHfk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"first_name\": \"string45\",\r\n  \"last_name\": \"string11\",\r\n  \"dob\": \"2024-11-28\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "User Managmenet"
+		},
+		{
+			"name": "Session",
+			"item": [
+				{
+					"name": "create session",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDM3N2Q3My0xOGVmLTQ2ZWItODAyOC02NzA4NTNkNDhiM2UiLCJpYXQiOjE3MzI4MjU2NjksIm5iZiI6MTczMjgyNTY2OSwianRpIjoiOThmNGZiYjAtMzhkOC00ODIwLWFjNDQtZGZiZWViN2E1ZTE5IiwidHlwZSI6ImFjY2VzcyIsImZyZXNoIjpmYWxzZX0.FcPqIjQ4uN1prHCGCUhLtFzc1XZGnS07MuNw78XlHfk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/session/create",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"session",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get recent session",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDM3N2Q3My0xOGVmLTQ2ZWItODAyOC02NzA4NTNkNDhiM2UiLCJpYXQiOjE3MzI4MjU2NjksIm5iZiI6MTczMjgyNTY2OSwianRpIjoiOThmNGZiYjAtMzhkOC00ODIwLWFjNDQtZGZiZWViN2E1ZTE5IiwidHlwZSI6ImFjY2VzcyIsImZyZXNoIjpmYWxzZX0.FcPqIjQ4uN1prHCGCUhLtFzc1XZGnS07MuNw78XlHfk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/session/get",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"session",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete session",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDM3N2Q3My0xOGVmLTQ2ZWItODAyOC02NzA4NTNkNDhiM2UiLCJpYXQiOjE3MzI4MjU2NjksIm5iZiI6MTczMjgyNTY2OSwianRpIjoiOThmNGZiYjAtMzhkOC00ODIwLWFjNDQtZGZiZWViN2E1ZTE5IiwidHlwZSI6ImFjY2VzcyIsImZyZXNoIjpmYWxzZX0.FcPqIjQ4uN1prHCGCUhLtFzc1XZGnS07MuNw78XlHfk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/session/delete/81fd5a38-4c03-402a-b319-71bcf8509a6d",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"session",
+								"delete",
+								"81fd5a38-4c03-402a-b319-71bcf8509a6d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all sessions",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDM3N2Q3My0xOGVmLTQ2ZWItODAyOC02NzA4NTNkNDhiM2UiLCJpYXQiOjE3MzI4MjU2NjksIm5iZiI6MTczMjgyNTY2OSwianRpIjoiOThmNGZiYjAtMzhkOC00ODIwLWFjNDQtZGZiZWViN2E1ZTE5IiwidHlwZSI6ImFjY2VzcyIsImZyZXNoIjpmYWxzZX0.FcPqIjQ4uN1prHCGCUhLtFzc1XZGnS07MuNw78XlHfk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/session/all",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"session",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update session name",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDM3N2Q3My0xOGVmLTQ2ZWItODAyOC02NzA4NTNkNDhiM2UiLCJpYXQiOjE3MzI4MjU2NjksIm5iZiI6MTczMjgyNTY2OSwianRpIjoiOThmNGZiYjAtMzhkOC00ODIwLWFjNDQtZGZiZWViN2E1ZTE5IiwidHlwZSI6ImFjY2VzcyIsImZyZXNoIjpmYWxzZX0.FcPqIjQ4uN1prHCGCUhLtFzc1XZGnS07MuNw78XlHfk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/session/update/e800c33d-8fcd-4baa-a508-3c5ecebae3c3?session_name=Some name",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"session",
+								"update",
+								"e800c33d-8fcd-4baa-a508-3c5ecebae3c3"
+							],
+							"query": [
+								{
+									"key": "session_name",
+									"value": "Some name"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Session Managemnt"
+		},
+		{
+			"name": "Chat",
+			"item": [
+				{
+					"name": "Chat",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDM3N2Q3My0xOGVmLTQ2ZWItODAyOC02NzA4NTNkNDhiM2UiLCJpYXQiOjE3MzI4MjU2NjksIm5iZiI6MTczMjgyNTY2OSwianRpIjoiOThmNGZiYjAtMzhkOC00ODIwLWFjNDQtZGZiZWViN2E1ZTE5IiwidHlwZSI6ImFjY2VzcyIsImZyZXNoIjpmYWxzZX0.FcPqIjQ4uN1prHCGCUhLtFzc1XZGnS07MuNw78XlHfk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/chat/query/e800c33d-8fcd-4baa-a508-3c5ecebae3c3?query=Mosques in Lahore",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"chat",
+								"query",
+								"e800c33d-8fcd-4baa-a508-3c5ecebae3c3"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Mosques in Lahore"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Chat history",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MDM3N2Q3My0xOGVmLTQ2ZWItODAyOC02NzA4NTNkNDhiM2UiLCJpYXQiOjE3MzI4MjU2NjksIm5iZiI6MTczMjgyNTY2OSwianRpIjoiOThmNGZiYjAtMzhkOC00ODIwLWFjNDQtZGZiZWViN2E1ZTE5IiwidHlwZSI6ImFjY2VzcyIsImZyZXNoIjpmYWxzZX0.FcPqIjQ4uN1prHCGCUhLtFzc1XZGnS07MuNw78XlHfk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/chat/history/e800c33d-8fcd-4baa-a508-3c5ecebae3c3",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"chat",
+								"history",
+								"e800c33d-8fcd-4baa-a508-3c5ecebae3c3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}

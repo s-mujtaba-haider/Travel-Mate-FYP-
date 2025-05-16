@@ -1,0 +1,26 @@
+[project]
+name = "csv-rag"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=0.3.7",
+    "langchain-core>=0.3.18",
+    "langchain-openai>=0.2.8",
+    "ruff>=0.7.3",
+    "pydantic>=2.9.2",
+    "pandas>=2.2.3",
+    "faiss-cpu>=1.9.0",
+    "fastapi[standard]>=0.115.5",
+    "psycopg[binary]>=3.2.3",
+    "alembic>=1.14.0",
+    "python-multipart>=0.0.17",
+    "python-dotenv>=1.0.1",
+    "sqlalchemy[asyncio]>=2.0.36",
+    "jinja2>=3.1.4",
+    "anyio>=4.6.2.post1",
+    "fastapi-another-jwt-auth>=0.1.11",
+    "werkzeug>=3.1.3",
+    "langchain-community>=0.3.4",
+]
